@@ -1,0 +1,69 @@
+{
+  "policy_id": "POL-2024-000123",
+  "policy_holder": "Somchai Prasert",
+  "currency": "THB",
+  "effective_date": "2024-01-01",
+  "expiry_date": "2024-12-31",
+  "annual_limit": 100000,
+  "exclusions": [
+    {
+      "code": "EX-01",
+      "description": "Cosmetic or aesthetic treatment",
+      "keywords": ["cosmetic", "aesthetic", "whitening"]
+    },
+    {
+      "code": "EX-02",
+      "description": "Infertility treatment",
+      "keywords": ["infertility", "ivf"]
+    },
+    {
+      "code": "EX-03",
+      "description": "Self-inflicted injury",
+      "keywords": ["self-inflicted"]
+    }
+  ],
+  "benefits": [
+    {
+      "benefit_type": "OUTPATIENT",
+      "annual_limit": 20000,
+      "waiting_period_days": 30,
+      "copay": { "type": "PERCENTAGE", "value": 20 },
+      "max_visits": 30,
+      "sub_benefits": [
+        { "name": "Doctor Visit", "per_visit_limit": 3000 },
+        { "name": "Lab Test", "per_visit_limit": 2000 },
+        { "name": "Physiotherapy", "per_visit_limit": 1000, "max_visits": 2 }
+      ]
+    },
+    {
+      "benefit_type": "INPATIENT",
+      "annual_limit": 70000,
+      "waiting_period_days": 30,
+      "deductible": 2000,
+      "sub_benefits": [
+        { "name": "Room & Board", "per_visit_limit": 5000 },
+        { "name": "Surgery", "per_visit_limit": 40000 }
+      ]
+    },
+    {
+      "benefit_type": "DENTAL",
+      "annual_limit": 4000,
+      "waiting_period_days": 90,
+      "copay": { "type": "FIXED", "value": 200 },
+      "max_visits": 4,
+      "sub_benefits": [
+        { "name": "Cleaning", "per_visit_limit": 1500 },
+        { "name": "Filling", "per_visit_limit": 2500 }
+      ]
+    },
+    {
+      "benefit_type": "MATERNITY",
+      "annual_limit": 30000,
+      "waiting_period_days": 280,
+      "sub_benefits": [
+        { "name": "Prenatal Checkup", "per_visit_limit": 2000, "max_visits": 12 },
+        { "name": "Delivery", "per_visit_limit": 25000 }
+      ]
+    }
+  ]
+}
